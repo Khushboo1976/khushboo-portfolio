@@ -1,0 +1,56 @@
+:root {
+  /* Background */
+  --background: #030712;
+  --surface: #111827;
+  --surface-light: #1f2937;
+
+  /* Text */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  /* Brand */
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+
+  --secondary: #8b5cf6;
+
+  --accent: #06b6d4;
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.08);
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 20px rgba(0,0,0,.2);
+
+  --shadow-lg: 0 20px 60px rgba(0,0,0,.35);
+
+  /* Layout */
+  --container: 1280px;
+}
+
+/* Global Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-poppins), sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  scroll-margin-top: 100px;
+}

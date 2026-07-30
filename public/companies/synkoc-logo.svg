@@ -1,0 +1,29 @@
+<svg width="520" height="520" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="blue-arc" d="M 70 320 A 195 195 0 1 1 430 230" fill="none"/>
+    <path id="red-arc" d="M 450 210 A 195 195 0 1 1 90 300" fill="none"/>
+  </defs>
+
+  <!-- blue arrow (top) -->
+  <use href="#blue-arc" stroke="#2E86D8" stroke-width="26" stroke-linecap="round"/>
+  <polygon points="430,230 392,214 402,254" fill="#2E86D8"/>
+
+  <!-- red arrow (bottom) -->
+  <use href="#red-arc" stroke="#B72B2B" stroke-width="26" stroke-linecap="round"/>
+  <polygon points="90,300 128,316 118,276" fill="#B72B2B"/>
+
+  <!-- arc labels -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="24" fill="#2E86D8">
+    <textPath href="#blue-arc" startOffset="14%">Technology Training</textPath>
+  </text>
+  <text font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="24" fill="#2E86D8">
+    <textPath href="#red-arc" startOffset="66%">Managed Service Provider</textPath>
+  </text>
+
+  <!-- TM mark -->
+  <text x="470" y="130" font-family="Arial, sans-serif" font-size="16" fill="#1A1A1A">TM</text>
+
+  <!-- center wordmark -->
+  <text x="260" y="278" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="72" fill="#C0272D">SYNKOC</text>
+  <text x="260" y="240" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="15" letter-spacing="2" fill="#C0272D">Tech | Innovation | Trust</text>
+</svg>

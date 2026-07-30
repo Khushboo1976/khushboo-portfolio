@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+<defs>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#fff3b0"/>
+    <stop offset="30%" stop-color="#f5d36a"/>
+    <stop offset="70%" stop-color="#c9921f"/>
+    <stop offset="100%" stop-color="#8d6110"/>
+  </linearGradient>
+</defs>
+
+<g>
+  <animateTransform attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 80 80"
+      to="360 80 80"
+      dur="1.6s"
+      repeatCount="indefinite"/>
+  <circle cx="80" cy="80" r="58"
+          fill="none"
+          stroke="url(#gold)"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-dasharray="220 110"/>
+</g>
+
+<g fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M52 40V120" stroke-width="8"/>
+  <path d="M52 80L95 40" stroke-width="6"/>
+  <path d="M52 80L98 120" stroke-width="6"/>
+
+  <path d="M116 56
+           C106 48 91 50 84 63
+           C77 76 80 95 94 104
+           C107 112 122 103 123 88
+           L107 88"
+        stroke-width="8"/>
+</g>
+
+<circle cx="80" cy="80" r="76" fill="none" stroke="rgba(255,255,255,0.08)"/>
+</svg>

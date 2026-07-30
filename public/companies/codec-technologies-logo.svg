@@ -1,0 +1,22 @@
+<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="codec-globe-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E930A6"/>
+      <stop offset="50%" stop-color="#9B3FD4"/>
+      <stop offset="100%" stop-color="#3B5FE0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="200" fill="#000000"/>
+
+  <g transform="translate(105,100)" fill="none" stroke="url(#codec-globe-grad)" stroke-width="2.2">
+    <ellipse rx="62" ry="62"/>
+    <ellipse rx="62" ry="24" transform="rotate(15)"/>
+    <ellipse rx="62" ry="24" transform="rotate(75)"/>
+    <ellipse rx="62" ry="24" transform="rotate(-45)"/>
+    <ellipse rx="30" ry="62" transform="rotate(20)"/>
+  </g>
+
+  <text x="230" y="90" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="50" letter-spacing="6" fill="#FFFFFF">CODEC</text>
+  <text x="232" y="122" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="20" letter-spacing="7" fill="#FFFFFF">TECHNOLOGIES</text>
+</svg>
