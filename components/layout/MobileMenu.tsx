@@ -130,7 +130,7 @@ export default function MobileMenu({
                 </Link>
 
                 <Link
-                  href="mailto:khushboogoyal1976@gmail.com"
+                  href="mailto:khushboogoyal12244@gmail.com"
                   className="transition hover:text-cyan-400"
                 >
                   <FaEnvelope />
