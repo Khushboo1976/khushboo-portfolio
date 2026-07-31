@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 
 import NavLogo from "./NavLogo";
@@ -19,9 +19,12 @@ export default function Navbar() {
     };
 
     handleScroll();
+
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -54,17 +57,12 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <NavLinks />
 
-          {/* Desktop Actions */}
+          {/* Desktop Buttons */}
           <div className="hidden items-center gap-4 lg:flex">
-            {/* Resume */}
             <motion.div
               whileHover={{
                 scale: 1.05,
                 y: -2,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
               }}
             >
               <Link
@@ -76,7 +74,6 @@ export default function Navbar() {
               </Link>
             </motion.div>
 
-            {/* Hire Me */}
             <motion.div
               animate={{
                 boxShadow: [
@@ -97,6 +94,7 @@ export default function Navbar() {
             >
               <Link
                 href="https://wa.me/919354226150?text=Hi%20Khushboo,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
+                target="_blank"
                 className="rounded-xl bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/30 transition-all duration-300"
               >
                 Hire Me
@@ -105,21 +103,27 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="rounded-xl border border-white/10 p-2 text-white transition hover:bg-white/10 lg:hidden"
+          <motion.button
+            type="button"
+            whileTap={{ scale: 0.9 }}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setMenuOpen((prev) => !prev);
+            }}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            className="relative z-[9999] rounded-xl border border-white/10 bg-white/5 p-2 text-white backdrop-blur transition-all duration-300 hover:bg-white/10 active:scale-95 lg:hidden"
           >
             <Menu size={24} />
-          </button>
+          </motion.button>
         </div>
       </motion.header>
 
-      <AnimatePresence>
-        <MobileMenu
-          isOpen={menuOpen}
-          onClose={() => setMenuOpen(false)}
-        />
-      </AnimatePresence>
+      <MobileMenu
+        isOpen={menuOpen}
+        onClose={() => setMenuOpen(false)}
+      />
     </>
   );
 }
