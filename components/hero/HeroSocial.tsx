@@ -22,7 +22,7 @@ export default function HeroSocial() {
       </a>
 
       <a
-        href="mailto:your@email.com"
+        href="khushboo12244@gmail.com"
         className="text-2xl text-zinc-400 transition hover:text-blue-500"
       >
         <FaEnvelope />
