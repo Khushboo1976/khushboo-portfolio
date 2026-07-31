@@ -12,7 +12,7 @@ Designed to provide recruiters, hiring managers, and collaborators with a compre
 
 ### 🌐 Live Portfolio
 
-**Coming Soon**
+[**Live**](https://khushboo-portfolio-pink.vercel.app/)
 
 ---
 
