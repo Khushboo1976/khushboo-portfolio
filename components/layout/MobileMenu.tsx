@@ -20,9 +20,13 @@ export default function MobileMenu({
 }: MobileMenuProps) {
   const pathname = usePathname();
 
+  // Close menu only when route changes
   useEffect(() => {
-    onClose();
-  }, [pathname, onClose]);
+    if (isOpen) {
+      onClose();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   return (
     <AnimatePresence>
@@ -63,6 +67,7 @@ export default function MobileMenu({
               </div>
 
               <button
+                type="button"
                 onClick={onClose}
                 className="rounded-xl border border-white/10 p-2 text-white transition hover:bg-white/10"
               >
@@ -72,26 +77,16 @@ export default function MobileMenu({
 
             {/* Navigation */}
             <nav className="flex flex-1 flex-col gap-2 p-6">
-              {navigation.map((item) => {
-                const active =
-                  pathname === item.href ||
-                  (item.href !== "/" &&
-                    pathname.startsWith(item.href));
-
-                return (
-                  <Link
-                    key={item.title}
-                    href={item.href}
-                    className={`rounded-xl px-4 py-3 text-base font-medium transition ${
-                      active
-                        ? "bg-cyan-500/10 text-cyan-400"
-                        : "text-slate-300 hover:bg-white/5 hover:text-white"
-                    }`}
-                  >
-                    {item.title}
-                  </Link>
-                );
-              })}
+              {navigation.map((item) => (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  onClick={onClose}
+                  className="rounded-xl px-4 py-3 text-base font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+                >
+                  {item.title}
+                </Link>
+              ))}
             </nav>
 
             {/* Buttons */}
@@ -99,24 +94,24 @@ export default function MobileMenu({
               <Link
                 href="/resume/Khushboo_Goyal_Resume.pdf"
                 target="_blank"
+                onClick={onClose}
                 className="flex justify-center rounded-xl border border-cyan-400/30 px-5 py-3 font-medium text-cyan-300 transition hover:bg-cyan-500/10"
               >
                 Download Resume
               </Link>
 
               <Link
-                href="/contact"
+                href="#footer"
+                onClick={onClose}
                 className="flex justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 font-semibold text-white shadow-lg shadow-cyan-500/30 transition hover:scale-[1.02]"
               >
                 Hire Me
               </Link>
 
-              {/* Social */}
               <div className="flex justify-center gap-6 pt-4 text-xl text-slate-400">
                 <Link
                   href="https://github.com/Khushboo1976"
                   target="_blank"
-                  className="transition hover:text-white"
                 >
                   <FaGithub />
                 </Link>
@@ -124,15 +119,11 @@ export default function MobileMenu({
                 <Link
                   href="https://www.linkedin.com/in/khushboo-goyal-32bab0291/"
                   target="_blank"
-                  className="transition hover:text-cyan-400"
                 >
                   <FaLinkedin />
                 </Link>
 
-                <Link
-                  href="mailto:khushboogoyal12244@gmail.com"
-                  className="transition hover:text-cyan-400"
-                >
+                <Link href="mailto:khushboogoyal12244@gmail.com">
                   <FaEnvelope />
                 </Link>
               </div>
