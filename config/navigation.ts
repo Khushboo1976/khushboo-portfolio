@@ -18,7 +18,7 @@ export const navigation = [
   },
   {
     title: "Skills",
-    href: "#skills",
+    href: "#tech-stack",
   },
   {
     title: "Projects",
