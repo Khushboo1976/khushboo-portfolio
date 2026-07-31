@@ -268,7 +268,7 @@ export const PROJECTS: Project[] = [
         github:
             "https://github.com/Khushboo1976/Autonomous-Agent",
 
-        live: "",
+        live: "https://autonomous-agent-swis.onrender.com/",
 
     },
 
